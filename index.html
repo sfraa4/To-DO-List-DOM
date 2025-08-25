@@ -11,7 +11,7 @@
     <h1>To-Do List</h1>
     <div id="form">
       <input type="text" id="teks" placeholder="u tambah dulu kocag" />
-      <button id="button" type="button">klik dulu enih</button>
+      <button id="button" type="button">abistu klik enih</button>
     </div>
     <ul id="list"></ul>
   </div>
@@ -27,12 +27,26 @@
         if (teksv !== "") {
         
         const li = document.createElement("li");
-        li.textContent = teksv;
+        
+        const spanText = document.createElement("span");
+        spanText.textContent = teksv;
+        li.appendChild(spanText);
+
+        const btnEdit = document.createElement("button");
+        btnEdit.classList.add("btnedit");
+        btnEdit.textContent = "edit nich";
+
+        const btnDelete = document.createElement("button");
+        btnDelete.textContent = "salah yh awokawok";
+
+        li.appendChild(btnEdit);
+        li.appendChild(btnDelete);
+
         list.appendChild(li);
         teks.value = "";
         }
         else{
-            alert("anuuu,,, gabole kosong kocag.")
+            alert("anuuu,,, gabole kosong hmzzzz.")
         }
     });
   </script>
